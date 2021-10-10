@@ -44,11 +44,14 @@ window.onload = function(){
 			turn(square.target.id,firstPlayer);
 			flag = false;
 			console.log(flag);
+			boardlist[square.target.id].style.color="red";
 		}
 		else{
 			turn(square.target.id,secondPlayer);
 			flag = true;
-			console.log(flag);
+			//console.log(flag);
+			console.log(square.target.id);
+			boardlist[square.target.id].style.color="blue";
 		}
 		//console.log(square.target.id);
 	}
@@ -56,6 +59,7 @@ window.onload = function(){
 	function turn(squareId,player){
 		BoardState[squareId] =player;
 		document.getElementById(squareId).innerText=player;
+		
 	}
 
 	function newGame (){
@@ -74,7 +78,8 @@ window.onload = function(){
 	var divItemTextFP= document.createTextNode("X");
 	var divItemTextSP= document.createTextNode("O");
 	divItem.appendChild(divItemTextFP)
-	//console.log(boardlist[0]);
+
+	//console.log(boardlist[0].innerText="X");
 	//console.log("mission Complete");
 	
 	//console.log(boardlist[8]);
