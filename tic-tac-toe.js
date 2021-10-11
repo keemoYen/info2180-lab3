@@ -38,7 +38,8 @@ window.onload = function(){
 	[0,4,8],
 	[6,4,2],
 	];
-	
+	highlight(flag);
+
 	function clickEventHandler(square){
 		if (flag){
 			turn(square.target.id,firstPlayer);
@@ -72,13 +73,40 @@ window.onload = function(){
 	}
 	var button = document.querySelector("button");
 	button.addEventListener('click',newGame);
+	
+	function highlight(flag){
+		if (flag){
+			boardlist[0].addEventListener("mouseover",function(e){e.target.classList.add('hover')});
+			boardlist[0].addEventListener("mouseout",function(e){e.target.classList.remove('hover')});
+			boardlist[1].addEventListener("mouseover",function(e){e.target.classList.add('hover')});
+			boardlist[1].addEventListener("mouseout",function(e){e.target.classList.remove('hover')});
+			boardlist[2].addEventListener("mouseover",function(e){e.target.classList.add('hover')});
+			boardlist[2].addEventListener("mouseout",function(e){e.target.classList.remove('hover')});
+			boardlist[3].addEventListener("mouseover",function(e){e.target.classList.add('hover')});
+			boardlist[3].addEventListener("mouseout",function(e){e.target.classList.remove('hover')});
+			boardlist[4].addEventListener("mouseover",function(e){e.target.classList.add('hover')});
+			boardlist[4].addEventListener("mouseout",function(e){e.target.classList.remove('hover')});
+			boardlist[5].addEventListener("mouseover",function(e){e.target.classList.add('hover')});
+			boardlist[5].addEventListener("mouseout",function(e){e.target.classList.remove('hover')});
+			boardlist[6].addEventListener("mouseover",function(e){e.target.classList.add('hover')});
+			boardlist[6].addEventListener("mouseout",function(e){e.target.classList.remove('hover')});
+			boardlist[7].addEventListener("mouseover",function(e){e.target.classList.add('hover')});
+			boardlist[7].addEventListener("mouseout",function(e){e.target.classList.remove('hover')});
+			boardlist[8].addEventListener("mouseover",function(e){e.target.classList.add('hover')});
+			boardlist[8].addEventListener("mouseout",function(e){e.target.classList.remove('hover')});
+		}
+		else{
+
+		}
+	}
+	/*
 
 	var divItem = document.createElement("p");
 	divItem.setAttribute("class",".square.X");
 	var divItemTextFP= document.createTextNode("X");
 	var divItemTextSP= document.createTextNode("O");
 	divItem.appendChild(divItemTextFP)
-
+	*/
 	//console.log(boardlist[0].innerText="X");
 	//console.log("mission Complete");
 	
